@@ -35,48 +35,24 @@
           link="#/" icon="local_library">
       </essential-link>
       <essential-link  
-          title="کاربران" caption="user" 
+          title="user" caption="user" 
           link="#/users" icon="data_object">
       </essential-link>
       <essential-link  
-          title="پروژه" caption="project" 
-          link="#/projects" icon="data_object">
+          title="group" caption="group" 
+          link="#/groups" icon="data_object">
       </essential-link>
       <essential-link  
-          title="دسترسی پروژه" caption="project_users" 
-          link="#/project_userss" icon="data_object">
+          title="assign" caption="assign" 
+          link="#/assigns" icon="data_object">
       </essential-link>
       <essential-link  
-          title="نوع داده" caption="dttype" 
-          link="#/dttypes" icon="data_object">
+          title="payment" caption="payment" 
+          link="#/payments" icon="data_object">
       </essential-link>
       <essential-link  
-          title="آیتم" caption="dtitem" 
-          link="#/dtitems" icon="data_object">
-      </essential-link>
-      <essential-link  
-          title="موضوع" caption="topic" 
-          link="#/topics" icon="data_object">
-      </essential-link>
-      <essential-link  
-          title="فدریت" caption="federate" 
-          link="#/federates" icon="data_object">
-      </essential-link>
-      <essential-link  
-          title="فدریت-تاپیک" caption="federatetopic" 
-          link="#/federatetopics" icon="data_object">
-      </essential-link>
-      <essential-link  
-          title="diagram" caption="diagram" 
-          link="#/diagrams" icon="data_object">
-      </essential-link>
-      <essential-link  
-          title="ویکی" caption="wiki" 
-          link="#/wikis" icon="data_object">
-      </essential-link>
-      <essential-link  
-          title="wiki_tags" caption="wiki_tags" 
-          link="#/wiki_tagss" icon="data_object">
+          title="sms" caption="sms" 
+          link="#/smss" icon="data_object">
       </essential-link>
       <essential-link 
           title="پروفایل" caption="مشخصات شما" 
