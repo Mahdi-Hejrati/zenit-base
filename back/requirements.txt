@@ -1,0 +1,10 @@
+fastapi
+fastapi-login
+uvicorn[standard]
+sqlalchemy
+alembic
+pymysql
+jdatetime
+pyjwt[crypto]
+passlib[bcrypt]
+python-multipart

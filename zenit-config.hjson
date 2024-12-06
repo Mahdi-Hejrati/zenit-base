@@ -1,0 +1,266 @@
+
+thing: [
+    { 
+        name: user
+        title: کاربران
+        noapis: [ 'post', 'history' ]
+        fields: [
+            {
+                name: user_name
+                type: str
+                label: نام
+            }
+            {
+                name: user_mobile
+                type: str
+                label: موبایل
+            }
+            {
+                name: user_tel
+                type: str
+                label: تلفن
+            }
+            {
+                name: user_country
+                type: str
+                label: کشور
+            }
+            {
+                name: user_city
+                type: str
+                label: شهر
+            }
+            {
+                name: user_lang
+                type: str
+                label: زبان
+            }
+            {
+                name: user_group
+                related_to: group
+                label: گروه
+            }
+            {
+                name: user_smshour
+                label: ساعت پیام
+                type: int
+            }
+            {
+                name: user_access
+                label: دسترسی
+                type: str
+            }
+            {
+                name: user_ack
+                label: فعال
+                type: bool
+            }
+            {
+                name: user_active
+                label: فعال
+                type: bool
+            }
+            {
+                name: user_bdate
+                label: تاریخ تولد
+                type: datetime
+            }
+            {
+                name: user_money
+                label: کیف پول
+                type: int
+            }
+            {
+                name: user_iswomen
+                label: جنسیت
+                type: bool
+            }
+            {
+                name: user_smslevel
+                label: نوع سرویس
+                type: str
+            }
+            {
+                name: user_smsfinishdate
+                label: تاریخ اعتبار سرویس
+                type: datetime
+            }
+            {
+                name: user_telegram_session
+                label: session_id
+                type: str
+            }
+        ]
+    }
+    {
+        name: group
+        label: گروه
+        noapis: [ 'delete', 'history' ]
+        fields: [
+            {
+                name: group_name
+                type: str
+                label: نام گروه
+            }
+            {
+                name: group_poshtiban
+                label: پشتیبان
+                related_to: user
+            }
+            {
+                name: group_start_date
+                label: تاریخ شروع
+                type: datetime
+            }
+            {
+                name: group_start_page
+                type: int
+                label: شروع صفحه
+            }
+            {
+                name: group_assign_day
+                type: datetime
+                label: تاریخ انتصاب
+            }
+            {
+                name: group_uc
+                type: int
+                label: تعداد اعضا
+            }
+            {
+                name: group_type
+                type: int
+                label: نوع گروه
+                title: 0>normal,1>private,2>freerun
+            }
+        ]
+    }
+    {
+        name: assign
+        label: انتصاب
+        noapis: [ 'patch', 'delete', 'history' ]
+        fields: [
+            {
+                name: assign_user
+                related_to: user
+                label: کاربر
+                display_format: '{user_name}' 
+            }
+            {
+                name: assign_moment
+                type: datetime
+                label: تاریخ
+            }
+            {
+                name: assign_pagenumber
+                type: int
+                label: صفحه
+            }
+            {
+                name: assign_status
+                type: int
+                label: وضعیت
+            }
+            {
+                name: assign_done_moment
+                type: datetime
+                label: تاریخ خوانده شدن
+            }
+            {
+                name: assign_follow_result
+                type: text
+                label: نتیجه پیگیری
+            }
+        ]
+    }
+    {
+        name: payment
+        label: پرداخت
+        noapis: [ 'post', 'patch', 'delete', 'history' ]
+        fields: [
+            {
+                name: py_user
+                label: کاربر
+                related_to: user
+            }
+            {
+                name: py_amount
+                type: int
+                label: مبلغ
+            }
+            {
+                name: py_desc
+                type: str
+                label: توضیح
+            }
+            {
+                name: py_state
+                type: int
+                label: وضعیت
+            }
+            {
+                name: py_date
+                type: datetime
+                label: تاریخ
+            }
+            {
+                name: py_RefId
+                type: str
+            }
+            {
+                name: py_xpaypingrequestid
+                type: str
+            }
+        ]
+    }
+    {
+        name: sms
+        label: sms
+        noapis: [ 'post', 'patch', 'delete', 'history' ]
+        fields: [
+            {
+                name: user
+                related_to: user
+                label: کاربر
+            }
+            {
+                name: sms_messageId
+                label: شماره
+                type: str
+            }
+            {
+                name: sms_moment
+                type: str
+                label: زمان ارسال
+            }
+            {
+                name: sms_receptor
+                type: str
+                label: موبایل
+            }
+            {
+                name: sms_message
+                type: str
+                label: متن
+            }
+            {
+                name: sms_status
+                type: bool
+                label: تحویل شده
+            }
+            {
+                name: sms_cost
+                type: int
+                label: هزینه
+            }
+        ]
+    }
+]
+
+forms: [
+
+]
+
+uigrids: [
+]
+

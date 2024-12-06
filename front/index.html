@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= productName %>
+  </title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="<%= productDescription %>">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (ctx.mode.cordova || ctx.mode.capacitor) { %>, viewport-fit=cover<% } %>">
+
+  <link rel="icon" type="image/png" sizes="128x128" href="icons/favicon-128x128.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="icon" type="image/ico" href="favicon.ico">
+
+  <link href="https://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- quasar:entry-point -->
+  <div id="loader" style="display: block; width: 100px; height: 100px; position: absolute; left: 50%; top: 300px;">
+    <div class="loader"></div>
+  </div>
+  <style type="text/css">
+    /* HTML: <div class="loader"></div> */
+.loader {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(#000 0 0) right/51% 100% no-repeat;
+  display: flex;
+  animation: l10-0 2s linear infinite;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  width: 15px;
+  background: #000;
+  animation: l10-1 2s linear infinite;
+}
+.loader:after {
+  animation-delay: -1s;
+  --s:-1;
+}
+@keyframes l10-1 {
+  0%,100%{transform:scaleX(var(--s,1)) rotate(0)}
+  25%,75%   {transform:scaleX(var(--s,1)) rotate(180deg)}
+}
+
+@keyframes l10-0 {
+  0%,49.9%{transform:scaleX( 1)}
+  50%,100%{transform:scaleX(-1)}
+}
+  </style>
+
+</body>
+
+</html>
